@@ -31,9 +31,9 @@ New proposal:
 Under this proposal, `itinerant_futurizer.py` does:
 1. Ask user for their GitHub password
 2. Get the last repo created and ask user to verify this is the repo that they want to process
-3. Verify that branch futurize-stage-1 does not yet exist on origin
+3. Verify that branch futurize-stage-1 does not yet exist on origin.  If it does then bail.
 4. If .travis.yml exists in that repo then rename it to was.travis.yml
-5. Open a webbrowser to https://travis-ci.org/profile/user and ask user to: 1. Sync Account and 2. Turn repo switch on
+5. travis enable -r user/repo  # https://github.com/travis-ci/travis.rb#enable
 6. Push our .travis.yml into repo to kick off futurize stage 1
 7. Remove our .travis.yml and restore was.travis.yml if present
 8. Open webbrowser to branch futurize-stage-1 on origin
