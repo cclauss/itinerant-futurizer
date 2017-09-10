@@ -20,11 +20,14 @@ So...  If you do not have write access to the repo then you must fork the repo (
 
 ### Manual Process
 1. Using the GitHub web ui, visit the repo to be processed and clicks "fork" in the upper right (_not_ clone).
-2. git checkout -b futurize-stage-1
-3. pip install future
-4. futurize --stage1 -w **/*.py
-5. git commit --all -m "futurize --stage1 -w **/*.py"
-6. git push --set-upstream origin futurize-stage-1
+2. $ git clone https://github.com/<your GitHub username>/<repo name>
+3. $ cd [reponame]
+4. git checkout -b modernize-python2-code
+5. python2 -m flake8 . --count --select=E901,E999,F821,F822,F823 --show-source --statistics
+6. futurize --stage1 -w **/*.py
+7. python3 -m flake8 . --count --select=E901,E999,F821,F822,F823 --show-source --statistics
+8. git commit --all -m "Modernize Python 2 code to get ready for Python 3"
+9. git push --set-upstream origin modernize-python2-code
 
 ### Automatic Process (WIP)
 
