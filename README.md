@@ -18,6 +18,16 @@ https://stackoverflow.com/questions/6286571/are-git-forks-actually-git-clones
 
 So...  If you do not have write access to the repo then you must fork the repo (upstream) into a repo (origin) in your own GitHub account.  You then make changes and commits to a repo (local) on your computer and push those changes from local to origin.  Then you can create a pull request to suggest that changes move from origin to upstream.
 
+### Manual Process
+1. Using the GitHub web ui, visit the repo to be processed and clicks "fork" in the upper right (_not_ clone).
+2. git checkout -b futurize-stage-1
+3. pip install future
+4. futurize --stage1 -w **/*.py
+5. git commit --all -m "futurize --stage1 -w **/*.py"
+6. git push --set-upstream origin futurize-stage-1
+
+### Automatic Process (WIP)
+
 There are two problems with automating this process.  Neither git CLI nor [github3.py](https://github3.readthedocs.io/en/develop/github.html) support:
 1. creating a fork
 2. creating a pull request
