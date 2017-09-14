@@ -8,7 +8,7 @@ If __you do not have write access__ to the repo then [__you must fork (not clone
 
 ### Manual Process
 1. Using the GitHub web ui, visit the repo to be processed and clicks "fork" in the upper right (_not_ clone).
-2. $ git clone https://github.com/\<your GitHub username\>/\<repo name\>
+2. $ git clone `https://github.com/<your GitHub username>/<repo name>`
 3. $ cd [reponame]
 4. git checkout -b modernize-python2-code
 5. python2 -m flake8 . --count --select=E901,E999,F821,F822,F823 --show-source --statistics
