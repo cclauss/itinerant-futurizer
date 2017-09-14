@@ -1,33 +1,22 @@
 # itinerant-futurizer
 
-See: http://python-future.org/futurize_cheatsheet.html
+See:
+* http://python-future.org/futurize_cheatsheet.html
+* https://stackoverflow.com/questions/6286571/are-git-forks-actually-git-clones
 
-* git clone [url]
-* cd [reponame]
-* git checkout -b futurize-stage-1
-* pip install future
-* futurize --stage1 -w **/*.py
-* git commit --all -m "futurize --stage1 -w **/*.py"
-* git push --set-upstream origin futurize-stage-1
-
-> remote: Permission to bfelbo/DeepMoji.git denied to cclauss.
-
-> fatal: unable to access 'https://github.com/bfelbo/DeepMoji/': The requested URL returned error: 403
-
-https://stackoverflow.com/questions/6286571/are-git-forks-actually-git-clones
-
-So...  If you do not have write access to the repo then you must fork the repo (upstream) into a repo (origin) in your own GitHub account.  You then make changes and commits to a repo (local) on your computer and push those changes from local to origin.  Then you can create a pull request to suggest that changes move from origin to upstream.
+So...  If you do not have write access to the repo then [__you must fork (not clone)__](why_fork.md) the repo (upstream) into a repo (origin) in your own GitHub account.  You then make changes and commits to a repo (local) on your computer and push those changes from local to origin.  Then you can create a pull request to suggest that changes move from origin to upstream.
 
 ### Manual Process
 1. Using the GitHub web ui, visit the repo to be processed and clicks "fork" in the upper right (_not_ clone).
-2. $ git clone https://github.com/<your GitHub username>/<repo name>
+2. $ git clone https://github.com/\<your GitHub username\>/\<repo name\>
 3. $ cd [reponame]
 4. git checkout -b modernize-python2-code
 5. python2 -m flake8 . --count --select=E901,E999,F821,F822,F823 --show-source --statistics
-6. futurize --stage1 -w **/*.py
+6. futurize --stage1 -w \**/*.py
 7. python3 -m flake8 . --count --select=E901,E999,F821,F822,F823 --show-source --statistics
 8. git commit --all -m "Modernize Python 2 code to get ready for Python 3"
 9. git push --set-upstream origin modernize-python2-code
+10. Refresh GitHub web ui and you should have a Pull Request to submit back to upstream.
 
 ### Automatic Process (WIP)
 
