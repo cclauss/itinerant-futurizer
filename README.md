@@ -12,7 +12,7 @@ If __you do not have write access__ to the repo then [__you must fork (not clone
 3. $ cd [reponame]
 4. git checkout -b modernize-python2-code
 5. python2 -m flake8 . --count --select=E901,E999,F821,F822,F823 --show-source --statistics
-6. futurize --stage1 -w \**/*.py
+6. `futurize --stage1 -w **/*.py`
 7. python3 -m flake8 . --count --select=E901,E999,F821,F822,F823 --show-source --statistics
 8. git commit --all -m "Modernize Python 2 code to get ready for Python 3"
 9. git push --set-upstream origin modernize-python2-code
