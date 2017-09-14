@@ -4,7 +4,7 @@ See:
 * http://python-future.org/futurize_cheatsheet.html
 * https://stackoverflow.com/questions/6286571/are-git-forks-actually-git-clones
 
-So...  If you do not have write access to the repo then [__you must fork (not clone)__](why_fork.md) the repo (upstream) into a repo (origin) in your own GitHub account.  You then make changes and commits to a repo (local) on your computer and push those changes from local to origin.  Then you can create a pull request to suggest that changes move from origin to upstream.
+If __you do not have write access__ to the repo then [__you must fork (not clone)__](why_fork.md) the repo (upstream) into a repo (origin) in your own GitHub account.  You then make changes and commits to a repo (local) on your computer and push those changes from local to origin.  Then you can create a pull request to suggest that changes move from origin to upstream.
 
 ### Manual Process
 1. Using the GitHub web ui, visit the repo to be processed and clicks "fork" in the upper right (_not_ clone).
