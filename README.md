@@ -1,13 +1,13 @@
 # itinerant-futurizer
 
-See:
-* http://python-future.org/futurize_cheatsheet.html
-* https://stackoverflow.com/questions/6286571/are-git-forks-actually-git-clones
-
-If __you do not have write access__ to the repo then [__you must fork (not clone)__](why_fork.md) the repo (upstream) into a repo (origin) in your own GitHub account.  You then make changes and commits to a repo (local) on your computer and push those changes from local to origin.  Then you can create a pull request to suggest that changes move from origin to upstream.
+### Pre-work:
+* `pip install future`  # http://python-future.org/futurize_cheatsheet.html
+* `shopt -s globstar`   # https://unix.stackexchange.com/questions/49913/recursive-glob
+* Why __fork__: https://stackoverflow.com/questions/6286571/are-git-forks-actually-git-clones
+    * If __you do not have write access__ to the repo then [__you must fork (not clone)__](why_fork.md) the repo (upstream) into a repo (origin) in your own GitHub account.  You then make changes and commits to a repo (local) on your computer and push those changes from local to origin.  Then you can create a pull request to suggest that changes move from origin to upstream.
 
 ### Manual Process
-1. Using the GitHub web ui, visit the repo to be processed and clicks "fork" in the upper right (_not_ clone).
+1. Using the GitHub web ui, visit the repo to be processed and click "fork" in the upper right (_not_ clone).
 2. $ git clone `https://github.com/<your GitHub username>/<repo name>`
 3. $ cd [reponame]
 4. git checkout -b modernize-python2-code
@@ -19,7 +19,6 @@ If __you do not have write access__ to the repo then [__you must fork (not clone
 10. Refresh GitHub web ui and you should have a Pull Request to submit back to upstream.
 
 ### Automatic Process (WIP)
-
 There are two problems with automating this process.  Neither git CLI nor [github3.py](https://github3.readthedocs.io/en/develop/github.html) support:
 1. creating a fork
 2. creating a pull request
