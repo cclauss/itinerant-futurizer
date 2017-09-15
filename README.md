@@ -48,3 +48,7 @@ Our .travis.yml does:
 6. rm .travis.yml
 7. mv was.travis.yml .travis.yml
 
+---
+
+https://github.com/ArduPilot/ardupilot/pull/6954#issuecomment-329729348
+
