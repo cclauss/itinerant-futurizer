@@ -18,6 +18,8 @@
 9. git push --set-upstream origin modernize-python2-code
 10. Refresh GitHub web ui and you should have a Pull Request to submit back to upstream.
 
+---
+
 ### Automatic Process (WIP, pipe dream, not ready for prime time)
 There are two problems with automating this process.  Neither git CLI nor [github3.py](https://github3.readthedocs.io/en/develop/github.html) support:
 1. creating a fork
