@@ -5,6 +5,7 @@
 * `shopt -s globstar`   # on bash 4+  https://unix.stackexchange.com/questions/49913/recursive-glob
 * Why __fork (not clone)__: https://stackoverflow.com/questions/6286571/are-git-forks-actually-git-clones
     * If __you do not have write access__ to the repo then [__you must fork (not clone)__](why_fork.md) the repo (upstream) into a repo (origin) in your own GitHub account.  You then make changes and commits to a repo (local) on your computer and push those changes from local to origin.  Then you can create a pull request to suggest that changes move from origin to upstream.
+* Syncing with upstream: https://docs.python.org/devguide/gitbootcamp.html#syncing-with-upstream
 
 ### Manual Process
 1. Using the GitHub web ui, visit the repo to be processed and click "__fork__" in the upper right (_not_ clone).
