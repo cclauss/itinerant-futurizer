@@ -2,7 +2,6 @@
 
 ### Pre-work:
 * `pip install future`  # http://python-future.org/futurize_cheatsheet.html
-* `shopt -s globstar`   # on bash 4+  https://unix.stackexchange.com/questions/49913/recursive-glob
 * Why __fork (not clone)__: https://stackoverflow.com/questions/6286571/are-git-forks-actually-git-clones
     * If __you do not have write access__ to the repo then [__you must fork (not clone)__](why_fork.md) the repo (upstream) into a repo (origin) in your own GitHub account.  You then make changes and commits to a repo (local) on your computer and push those changes from local to origin.  Then you can create a pull request to suggest that changes move from origin to upstream.
 * Syncing with upstream: https://docs.python.org/devguide/gitbootcamp.html#syncing-with-upstream
@@ -10,14 +9,14 @@
 ### Manual Process
 1. Using the GitHub web ui, visit the repo to be processed and click "__fork__" in the upper right (_not_ clone).
 2. $ git clone `https://github.com/<your GitHub username>/<repo name>`
-3. $ git remote add upstream `https://github.com/<repo username>/<repo name>`
-4. $ cd [reponame]
+3. $ cd `<repo name>`
+4. $ git remote add upstream `https://github.com/<repo username>/<repo name>`
 5. git checkout -b modernize-python2-code
 6. python2 -m flake8 . --count --select=E901,E999,F821,F822,F823 --show-source --statistics
-7. `futurize --stage1 -w **/*.py`
+7. futurize --stage1 -w .
 8. python3 -m flake8 . --count --select=E901,E999,F821,F822,F823 --show-source --statistics
-9. git commit --all -m "Modernize Python 2 code to get ready for Python 3"
-10. git push --set-upstream origin modernize-python2-code
+9. git commit -am "Modernize Python 2 code to get ready for Python 3"
+10. git push --force origin modernize-python2-code
 11. Refresh GitHub web ui and you should have a Pull Request to submit back to upstream.
 
 ---
