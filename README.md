@@ -11,12 +11,12 @@
 2. $ git clone `https://github.com/<your GitHub username>/<repo name>`
 3. $ cd `<repo name>`
 4. $ git remote add upstream `https://github.com/<repo username>/<repo name>`
-5. git checkout -b modernize-python2-code
-6. python2 -m flake8 . --count --select=E901,E999,F821,F822,F823 --show-source --statistics
-7. futurize --stage1 -w .
-8. python3 -m flake8 . --count --select=E901,E999,F821,F822,F823 --show-source --statistics
-9. git commit -am "Modernize Python 2 code to get ready for Python 3"
-10. git push --force origin modernize-python2-code
+5. $ git checkout -b modernize-python2-code
+6. $ python2 -m flake8 . --count --select=E901,E999,F821,F822,F823 --show-source --statistics
+7. $ futurize --stage1 -w .
+8. $ python3 -m flake8 . --count --select=E901,E999,F821,F822,F823 --show-source --statistics
+9. $ git commit -am "Modernize Python 2 code to get ready for Python 3"
+10. $ git push --force origin modernize-python2-code
 11. Refresh GitHub web ui and you should have a Pull Request to submit back to upstream.
 
 ---
@@ -24,7 +24,7 @@
 ### Automatic Process (WIP, pipe dream, not ready for prime time)
 There are two problems with automating this process.  Neither git CLI nor [github3.py](https://github3.readthedocs.io/en/develop/github.html) support:
 1. creating a fork
-2. creating a pull request
+2. creating a pull request (See: https://github.com/cclauss/git-push-inside-travis)
 
 New proposal:
 1. Using the GitHub web ui, the user visits the repo to be processed and clicks "fork" in the upper right (_not_ clone).
