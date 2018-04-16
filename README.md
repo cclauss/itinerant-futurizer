@@ -13,7 +13,8 @@
 4. $ git remote add upstream `https://github.com/<repo username>/<repo name>`
 5. $ git checkout -b modernize-python2-code
 6. $ python2 -m flake8 . --count --select=E901,E999,F821,F822,F823 --show-source --statistics
-7. $ futurize --stage1 --nofix=libfuturize.fixes.fix_absolute_import -w .
+7. $ futurize --stage1 -x libfuturize.fixes.fix_absolute_import -w .
+    Or $ futurize -f libfuturize.fixes.fix_print_with_import -w .
 8. $ python3 -m flake8 . --count --select=E901,E999,F821,F822,F823 --show-source --statistics
 9. $ git commit -am "Modernize Python 2 code to get ready for Python 3"
 10. $ git push --force origin modernize-python2-code
