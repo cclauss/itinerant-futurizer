@@ -57,3 +57,4 @@ Our .travis.yml does:
 
 https://github.com/ArduPilot/ardupilot/pull/6954#issuecomment-329729348
 
+Zap trailing whitespace: sed -i 's/ \+$//' **/*.py
